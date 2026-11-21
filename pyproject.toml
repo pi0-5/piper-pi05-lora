@@ -120,6 +120,8 @@ ignore = [
     "PD008",  # Lots of false positives.
     "ISC001", # Disabling to support ruff format.
     "LOG015", # Use logger.info.
+    "RUF002", # Allow full-width punctuation in docstrings (Chinese comments).
+    "RUF003", # Allow full-width punctuation in comments (Chinese comments).
 ]
 unfixable = [
     "B905", # Fix defaults to strict=False, which is not what we want.

@@ -1063,7 +1063,7 @@ _CONFIGS = [
         # 初始化权重：π0.5 基础模型（第一次跑会自动从网上拉，约 10GB）
         weight_loader=weight_loaders.CheckpointWeightLoader("gs://openpi-assets/checkpoints/pi05_base/params"),
         num_train_steps=20_000,
-        batch_size=8,       # 24GB 显存先开 8；跑得动再试 16
+        batch_size=8,  # 24GB 显存先开 8；跑得动再试 16
         num_workers=2,
         save_interval=500,  # 每 500 步存一次 checkpoint
         log_interval=50,
@@ -1073,7 +1073,7 @@ _CONFIGS = [
             paligemma_variant="gemma_2b_lora",
             action_expert_variant="gemma_300m_lora",
         ).get_freeze_filter(),
-        ema_decay=None,     # LoRA 微调关掉 EMA
+        ema_decay=None,  # LoRA 微调关掉 EMA
     ),
     # ==========================================================================
     # ▲▲▲【新增结束】▲▲▲
